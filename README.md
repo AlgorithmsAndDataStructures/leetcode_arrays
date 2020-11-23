@@ -11,3 +11,4 @@ mvn -X archetype:generate -DgroupId=com.malmike.arrays -DartifactId=leetcode -Da
 Take note that the -X is meant to enable Maven's debug logging.
 
 > [Source for generating maven project](https://mkyong.com/maven/how-to-create-a-java-project-with-maven/)
+> [Setting a java version in maven](https://www.baeldung.com/maven-java-version)
