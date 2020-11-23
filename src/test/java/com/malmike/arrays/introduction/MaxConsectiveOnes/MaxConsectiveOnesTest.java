@@ -1,4 +1,4 @@
-package com.malmike.arrays.introduction;
+package com.malmike.arrays.introduction.MaxConsectiveOnes;
 
 import junit.framework.TestCase;
 
