@@ -30,6 +30,13 @@ jobs:
       run: mvn -v
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: Show files
+      run: |
+        echo "First preview"
+        echo ${{secrets.CC_TEST_REPORTER_ID}}
+        echo "${{github.workspace}}/src/main/java"
+        echo ${{github.workspace}}/target/site/jacoco/jacoco.xml:jacoco
+
     - name: Publish code coverage
       uses: paambaati/codeclimate-action@v2.7.4
       env:
