@@ -26,5 +26,7 @@ jobs:
         path: ~/.m2
         key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
         restore-keys: ${{ runner.os }}-m2
+    - name: Check Maven java-version
+      run: mvn -v
     - name: Build with Maven
       run: mvn -X -B package --file pom.xml
