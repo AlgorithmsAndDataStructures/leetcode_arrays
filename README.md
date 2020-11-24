@@ -1,7 +1,6 @@
 # LeetCode Arrays
 [![Maintainability](https://api.codeclimate.com/v1/badges/a50d3b648858018dd1c8/maintainability)](https://codeclimate.com/github/AlgorithmsAndDataStructures/leetcode_arrays/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/a50d3b648858018dd1c8/test_coverage)](https://codeclimate.com/github/AlgorithmsAndDataStructures/leetcode_arrays/test_coverage)
-[![Tests]](https://github.com/AlgorithmsAndDataStructures/leetcode_arrays/workflows/build/badge.svg)
 
 # Project Description
 This project contains solutions for leetcode introduction to datastructure Arrays 101
