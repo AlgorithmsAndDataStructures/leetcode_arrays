@@ -36,7 +36,5 @@ jobs:
         JACOCO_SOURCE_PATH: "${{github.workspace}}/src/main/java"
       with:
         coverageLocations: ${{github.workspace}}/target/site/jacoco/jacoco.xml:jacoco
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v3
 
 
