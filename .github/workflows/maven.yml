@@ -13,6 +13,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    
     steps:
     - uses: actions/checkout@v2
     - name: Set up JDK 13.0.1
@@ -25,8 +26,6 @@ jobs:
         path: ~/.m2
         key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
         restore-keys: ${{ runner.os }}-m2
-    - name: Check Maven java-version
-      run: mvn -v
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Publish code coverage
