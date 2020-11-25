@@ -34,3 +34,23 @@ How to compute the number of digits of a number ?
 Divide the number by 10 again and again to get the number of digits.
 
 ## Sudo Code
+Separate the functionality for determining the length of the number and that to loop through the array and determine values that are even or not
+
+### Function to determine length of number as numberLength
+*Notes*: The log (taking log of base 10) of a positive number returns a value which after excluding the decimal places is less than the length of the number by 1.
+
+```
+- Get the absolute value of the number passed as absNum
+- Get the log of absNum as lNum
+- Get the floor value of lNum as fLNum // removes the decimal points from lNum
+- Return fLNum + 1
+```
+
+### Function to determine numbers with number of digits in an array
+```
+- Set evenCounter to zero
+- Loop through the array assigning each value to num
+  - Using numberLength determine the length of num as lenNum
+  - If the modulus of lenNum and 2 is zero increment evenCounter by 1
+- Return evenCounter
+```
