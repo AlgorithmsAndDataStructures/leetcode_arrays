@@ -12,7 +12,7 @@ Explanation: The first two digits or the last three digits are consecutive 1s.
 ~~~
 
 ### Note:
-- The input array will only contain 0 and 1.
+- The input array will only contain <span style="color:red">0</span> and <span style="color:red">1</span>.
 - The length of input array is a positive integer and will not exceed 10,000
 
 ### Hint:
