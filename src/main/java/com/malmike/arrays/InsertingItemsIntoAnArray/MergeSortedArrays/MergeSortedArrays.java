@@ -1,7 +1,5 @@
 package com.malmike.arrays.InsertingItemsIntoAnArray.MergeSortedArrays;
 
-import java.util.Arrays;
-
 public class MergeSortedArrays {
     public void shiftArrayValues(int[] arr, int length, int position) {
         int currentValue = arr[position];
