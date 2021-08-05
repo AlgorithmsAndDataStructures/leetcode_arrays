@@ -29,6 +29,45 @@ public class FindAndReplaceInString {
         return stringBuilder.toString();
     }
 
+    public String findReplaceStringWithMap(String s, int[] indices, String[] sources, String[] targets) {
+        Map<Integer, String[]> sourceMap = new HashMap<Integer, String[]>();
+        StringBuilder stringBuilder = new StringBuilder(s);
+        for (int i = 0; i < indices.length; i++) {
+            int startPos = indices[i];
+            int endPos = indices[i] + sources[i].length();
+            String substring = stringBuilder.substring(startPos, endPos);
+
+            if (substring.equals(sources[i])) {
+                sourceMap.put(indices[i], new String[] { sources[i], targets[i] });
+            }
+        }
+
+        StringBuilder result = new StringBuilder();
+        int i = 0;
+        while (i < s.length()) {
+            if (sourceMap.containsKey(i)) {
+                String[] sourceTarget = sourceMap.get(i);
+                result.append(sourceTarget[1]);
+                i += sourceTarget[0].length();
+            } else {
+                result.append(s.charAt(i));
+                i++;
+            }
+        }
+
+        return result.toString();
+    }
+
+    /**
+     * Find and replace string using a priority queue. This works because there are
+     * meant to be no overlapping indexes to replace
+     *
+     * @param s
+     * @param indices
+     * @param sources
+     * @param targets
+     * @return
+     */
     public String findReplaceStringPriorityQueue(String s, int[] indices, String[] sources, String[] targets) {
         PriorityQueue<Node> indicesPQ = this.generatePriorityQueue(indices);
         StringBuilder stringBuilder = new StringBuilder(s);

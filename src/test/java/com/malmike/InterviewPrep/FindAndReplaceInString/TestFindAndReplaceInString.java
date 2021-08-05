@@ -102,4 +102,48 @@ public class TestFindAndReplaceInString {
         String result = findAndReplaceInString.findReplaceStringPriorityQueue(s, indices, sources, targets);
         assertTrue(output.equals(result));
     }
+
+    @Test
+    public void testCase9() {
+        String s = "abcd";
+        int[] indices = { 0, 2 };
+        String[] sources = { "a", "cd" };
+        String[] targets = { "eee", "ffff" };
+        String output = "eeebffff";
+        String result = findAndReplaceInString.findReplaceStringWithMap(s, indices, sources, targets);
+        assertTrue(output.equals(result));
+    }
+
+    @Test
+    public void testCase10() {
+        String s = "abcd";
+        int[] indices = { 0, 2 };
+        String[] sources = { "ab", "ec" };
+        String[] targets = { "eee", "ffff" };
+        String output = "eeecd";
+        String result = findAndReplaceInString.findReplaceStringWithMap(s, indices, sources, targets);
+        assertTrue(output.equals(result));
+    }
+
+    @Test
+    public void testCase11() {
+        String s = "vmokgggqzp";
+        int[] indices = { 3, 5, 1 };
+        String[] sources = { "kg", "ggq", "mo" };
+        String[] targets = { "s", "so", "bfr" };
+        String output = "vbfrssozp";
+        String result = findAndReplaceInString.findReplaceStringWithMap(s, indices, sources, targets);
+        assertTrue(output.equals(result));
+    }
+
+    @Test
+    public void testCase12() {
+        String s = "vmokgggqzp";
+        int[] indices = { 3, 1, 5 };
+        String[] sources = { "kg", "mo", "ggq" };
+        String[] targets = { "s", "so", "bfr" };
+        String output = "vsosbfrzp";
+        String result = findAndReplaceInString.findReplaceStringWithMap(s, indices, sources, targets);
+        assertTrue(output.equals(result));
+    }
 }
