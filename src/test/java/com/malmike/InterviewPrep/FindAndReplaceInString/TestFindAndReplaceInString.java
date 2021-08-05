@@ -35,18 +35,32 @@ public class TestFindAndReplaceInString {
 
     @Test
     public void testCase3() {
+        // Basing on the question this test is not applicable, but if overlaping
+        // elements were allowed then this would test for that
         String s = "abcd";
         int[] indices = { 2, 1, 0 };
         String[] sources = { "cd", "bc", "abc" };
         String[] targets = { "eee", "ffff", "rrrr" };
         String output = "abeee";
         String result = findAndReplaceInString.findReplaceString(s, indices, sources, targets);
-        System.out.println(result);
         assertTrue(output.equals(result));
     }
 
     @Test
     public void testCase4() {
+        // Basing on the question this test is not applicable, but if overlaping
+        // elements were allowed then this would test for that
+        String s = "abcd";
+        int[] indices = { 1, 0, 3 };
+        String[] sources = { "bc", "ab", "d" };
+        String[] targets = { "eee", "ffff", "rrrr" };
+        String output = "aeeerrrr";
+        String result = findAndReplaceInString.findReplaceString(s, indices, sources, targets);
+        assertTrue(output.equals(result));
+    }
+
+    @Test
+    public void testCase5() {
         String s = "abcd";
         int[] indices = { 0, 2 };
         String[] sources = { "a", "cd" };
@@ -57,7 +71,7 @@ public class TestFindAndReplaceInString {
     }
 
     @Test
-    public void testCase5() {
+    public void testCase6() {
         String s = "abcd";
         int[] indices = { 0, 2 };
         String[] sources = { "ab", "ec" };
@@ -68,29 +82,7 @@ public class TestFindAndReplaceInString {
     }
 
     @Test
-    public void testCase6() {
-        String s = "abcd";
-        int[] indices = { 2, 1, 0 };
-        String[] sources = { "cd", "bc", "abc" };
-        String[] targets = { "eee", "ffff", "rrrr" };
-        String output = "abeee";
-        String result = findAndReplaceInString.findReplaceStringPriorityQueue(s, indices, sources, targets);
-        assertTrue(output.equals(result));
-    }
-
-    @Test
     public void testCase7() {
-        String s = "abcd";
-        int[] indices = { 1, 0, 3 };
-        String[] sources = { "bc", "ab", "d" };
-        String[] targets = { "eee", "ffff", "rrrr" };
-        String output = "aeeerrrr";
-        String result = findAndReplaceInString.findReplaceStringPriorityQueue(s, indices, sources, targets);
-        assertTrue(output.equals(result));
-    }
-
-    @Test
-    public void testCase8() {
         String s = "vmokgggqzp";
         int[] indices = { 3, 5, 1 };
         String[] sources = { "kg", "ggq", "mo" };
@@ -101,7 +93,7 @@ public class TestFindAndReplaceInString {
     }
 
     @Test
-    public void testCase9() {
+    public void testCase8() {
         String s = "vmokgggqzp";
         int[] indices = { 3, 1, 5 };
         String[] sources = { "kg", "mo", "ggq" };

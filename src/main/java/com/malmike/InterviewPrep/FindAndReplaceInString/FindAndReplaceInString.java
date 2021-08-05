@@ -36,7 +36,6 @@ public class FindAndReplaceInString {
 
         while (!indicesPQ.isEmpty()) {
             Node node = indicesPQ.poll();
-            System.out.println(node.toString());
             int index = additionalLength + node.index;
             String source = sources[node.indicesPosition];
             String target = targets[node.indicesPosition];
@@ -47,9 +46,7 @@ public class FindAndReplaceInString {
                 stringBuilder.replace(index, index + sourceLength, target);
                 additionalLength += targetLength - sourceLength;
             }
-            System.out.println(stringBuilder.toString());
         }
-        System.out.println(stringBuilder.toString());
         return stringBuilder.toString();
     }
 

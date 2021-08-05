@@ -28,7 +28,6 @@ public class PriorityQueueExample {
             result[i] = pq.poll();
             i++;
         }
-        System.out.println(Arrays.toString(result));
         return result;
     }
 }
