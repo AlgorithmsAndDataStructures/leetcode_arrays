@@ -7,7 +7,6 @@ import java.util.stream.Stream;
 public class MergeIntervals {
     public int[][] merge(int[][] intervals) {
         int[][] result = this.mergeSort(intervals, 0, intervals.length);
-        this.printMultiDimentionalArray(result);
         return result;
     }
 
@@ -86,7 +85,6 @@ public class MergeIntervals {
 
     public int[][] merge2(int[][] intervals) {
         int[][] result = this.mergeSort2(intervals, 0, intervals.length);
-        this.printMultiDimentionalArray(result);
         return result;
     }
 
@@ -102,7 +100,6 @@ public class MergeIntervals {
         int[][] right = this.mergeSort2(intervals, start, mid);
         int[][] left = this.mergeSort2(intervals, mid + 1, end);
 
-        this.printMultiDimentionalArray(this.mergeSorted2(right, left));
         return this.mergeSorted2(right, left);
     }
 
@@ -151,13 +148,10 @@ public class MergeIntervals {
             leftPos++;
         }
 
-        this.printMultiDimentionalArray(result);
-        System.out.println(i);
         int[][] actualResult = new int[i][2];
         for (int j = 0; j < i; j++) {
             actualResult[j] = result[j];
         }
-        this.printMultiDimentionalArray(actualResult);
         return actualResult;
     }
 
