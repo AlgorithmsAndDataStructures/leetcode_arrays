@@ -26,7 +26,7 @@ public class MergeIntervals {
     }
 
     public void printMultiDimentionalArray(int[][] arrays) {
-        Stream result = Arrays.stream(arrays).map(array -> Arrays.toString(array));
+        Stream<String> result = Arrays.stream(arrays).map(array -> Arrays.toString(array));
         System.out.println(Arrays.toString(result.toArray()));
     }
 

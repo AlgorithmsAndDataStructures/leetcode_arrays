@@ -20,7 +20,7 @@ public class LetterCombinationsOfAPhoneNumber {
         }
     };
 
-    List<String> result2 = new ArrayList<String>();
+    List<String> result2;
 
     public List<String> letterCombinations(String digits) {
         List<String> result = new ArrayList<String>();
@@ -43,6 +43,7 @@ public class LetterCombinationsOfAPhoneNumber {
     }
 
     public List<String> letterCombinationsBackTracking(String digits) {
+        this.result2 = new ArrayList<String>();
         if (digits.length() > 0)
             this.letterCombinationsRecursive("", digits, 0);
         return this.result2;
