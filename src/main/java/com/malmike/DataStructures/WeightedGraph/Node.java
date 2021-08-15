@@ -1,4 +1,4 @@
-package com.malmike.InterviewPrep.DijkstrasAlgorithm.WeightedGraph;
+package com.malmike.DataStructures.WeightedGraph;
 
 public class Node<T> {
     private int edgeWeight;

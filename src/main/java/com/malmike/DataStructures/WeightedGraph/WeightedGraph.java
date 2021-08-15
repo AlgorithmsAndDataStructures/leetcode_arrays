@@ -1,4 +1,4 @@
-package com.malmike.InterviewPrep.DijkstrasAlgorithm.WeightedGraph;
+package com.malmike.DataStructures.WeightedGraph;
 
 import java.util.ArrayList;
 import java.util.HashMap;

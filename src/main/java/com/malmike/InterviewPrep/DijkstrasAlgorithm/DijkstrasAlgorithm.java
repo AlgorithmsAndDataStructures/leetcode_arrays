@@ -9,8 +9,8 @@ import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.stream.Collectors;
 
-import com.malmike.InterviewPrep.DijkstrasAlgorithm.WeightedGraph.Node;
-import com.malmike.InterviewPrep.DijkstrasAlgorithm.WeightedGraph.WeightedGraph;
+import com.malmike.DataStructures.WeightedGraph.Node;
+import com.malmike.DataStructures.WeightedGraph.WeightedGraph;
 
 public class DijkstrasAlgorithm {
     /**
