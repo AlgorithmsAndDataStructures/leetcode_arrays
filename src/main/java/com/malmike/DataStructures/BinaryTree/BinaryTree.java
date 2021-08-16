@@ -11,6 +11,17 @@ import java.util.Stack;
 public class BinaryTree {
     TreeNode binaryTree;
 
+    public BinaryTree() {
+    }
+
+    public BinaryTree(Integer[] values) {
+        this.createTreeNode(values);
+    }
+
+    public TreeNode getHeadNode() {
+        return this.binaryTree;
+    }
+
     public void createTreeNode(Integer[] values) {
         Queue<TreeNode> nodesQueue = new LinkedList<TreeNode>();
         binaryTree = new TreeNode(values[0]);
